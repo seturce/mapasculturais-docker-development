@@ -1,13 +1,17 @@
-FROM php:7.2-fpm
+FROM php:7.2-fpm-stretch
+
+RUN unlink /etc/localtime
+
+RUN ln -s /usr/share/zoneinfo/America/Fortaleza /etc/localtime
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        curl libcurl4-gnutls-dev locales imagemagick libmagickcore-dev libmagickwand-dev zip  libxml2-dev\
+        curl libcurl4-gnutls-dev locales imagemagick libmagickcore-dev libmagickwand-dev zip libxml2-dev\
         ruby ruby-dev libpq-dev gnupg nano iputils-ping git \
         libfreetype6-dev libjpeg62-turbo-dev libpng-dev
 
-
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
-    && apt-get install -y nodejs
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
+RUN apt-get update && apt-get install -y nodejs && apt-get clean
+RUN npm install npm --global
 
 # Install uglify
 RUN npm install -g \
@@ -19,7 +23,12 @@ RUN npm install -g \
 RUN gem install sass -v 3.4.22
 
 # Install extensions
-RUN docker-php-ext-install opcache pdo_pgsql zip xml curl json
+RUN docker-php-ext-install opcache pdo_pgsql xml curl json
+
+RUN apt-get update && apt-get install -y --fix-missing \
+    zlib1g-dev \
+    libzip-dev
+RUN docker-php-ext-install zip
 
 # Install GD
 RUN docker-php-ext-install -j$(nproc) iconv \
@@ -48,7 +57,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN rm -rf /var/lib/apt/lists/*
 
 # Copy php.ini configuration
-COPY ./php.ini /usr/local/etc/php/conf.d/php.ini
+COPY ./php.ini /usr/local/etc/php/conf.d/custom-php.ini
 
 # Permissions
 RUN chown -R root:www-data /var/www/html
