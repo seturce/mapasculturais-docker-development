@@ -28,6 +28,8 @@ services:
         volumes:
             - ${APPLICATION}:/var/www/html
             - ${APPLICATION_LOG_PATH}:/var/log/nginx/slim.log
+        environment:
+            - APP_MODE=${APP_MODE}
         links:
             - postgres
         depends_on:
