@@ -17,6 +17,7 @@ RUN npm install npm --global
 RUN npm install -g \
         uglify-js@2.2.0 \
         uglifycss \
+        terser \
         autoprefixer
 
 # Install sass
