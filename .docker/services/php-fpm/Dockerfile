@@ -4,6 +4,8 @@ RUN unlink /etc/localtime
 
 RUN ln -s /usr/share/zoneinfo/America/Fortaleza /etc/localtime
 
+RUN apt-get update && apt-get install -y apt-transport-https
+
 RUN apt-get install -y --no-install-recommends && rm -rf /var/lib/apt/lists/* \
         curl libcurl4-gnutls-dev locales imagemagick libmagickcore-dev libmagickwand-dev zip libxml2-dev\
         ruby ruby-dev libpq-dev gnupg nano iputils-ping git \
