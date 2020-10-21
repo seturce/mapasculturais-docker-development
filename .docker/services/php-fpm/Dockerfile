@@ -9,9 +9,8 @@ RUN apt-get install -y --no-install-recommends && rm -rf /var/lib/apt/lists/* \
         ruby ruby-dev libpq-dev gnupg nano iputils-ping git \
         libfreetype6-dev libjpeg62-turbo-dev libpng-dev
 
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
-RUN apt-get install -y nodejs
-RUN npm install npm --global
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
+    && apt-get install -y nodejs npm
 
 # Install uglify
 RUN npm install -g \
