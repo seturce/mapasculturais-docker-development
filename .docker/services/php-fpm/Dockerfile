@@ -10,7 +10,7 @@ RUN apt-get install -y --no-install-recommends && rm -rf /var/lib/apt/lists/* \
         libfreetype6-dev libjpeg62-turbo-dev libpng-dev
 
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
-RUN apt-get install -y nodejs && apt-get clean
+RUN apt-get install -y nodejs
 RUN npm install npm --global
 
 # Install uglify
