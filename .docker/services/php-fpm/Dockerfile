@@ -10,7 +10,7 @@ RUN apt-get install -y --no-install-recommends && rm -rf /var/lib/apt/lists/* \
         libfreetype6-dev libjpeg62-turbo-dev libpng-dev
 
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
-RUN apt-get update && apt-get install -y nodejs && apt-get clean
+RUN apt-get install -y nodejs && apt-get clean
 RUN npm install npm --global
 
 # Install uglify
@@ -26,7 +26,7 @@ RUN gem install sass -v 3.4.22
 # Install extensions
 RUN docker-php-ext-install opcache pdo_pgsql xml curl json
 
-RUN apt-get update && apt-get install -y --fix-missing \
+RUN apt-get install -y --fix-missing \
     zlib1g-dev \
     libzip-dev
 RUN docker-php-ext-install zip
