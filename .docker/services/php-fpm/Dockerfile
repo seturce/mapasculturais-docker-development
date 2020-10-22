@@ -72,6 +72,10 @@ RUN chmod -R 777 /var/log/nginx/
 
 COPY ./recreate-pending-pcache-cron.sh /recreate-pending-pcache-cron.sh
 COPY ./entrypoint.sh /entrypoint.sh
+
+RUN chmod +x /entrypoint.sh
+RUN chmod +x /recreate-pending-pcache-cron.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["php-fpm"]
