@@ -21,6 +21,7 @@ RUN npm install -g \
         autoprefixer
 
 # Install sass
+RUN apt-get install -y build-essential
 RUN gem install sass -v 3.4.22
 
 # Install extensions
