@@ -48,7 +48,7 @@ RUN pecl install imagick-beta \
 
 # Install xdebug
 RUN pecl install -f xdebug-2.7.2 \
-    docker-php-ext-enable xdebug 
+    docker-php-ext-enable xdebug-2.7.2
 
 # Copy xdebug configration
 COPY ./xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
