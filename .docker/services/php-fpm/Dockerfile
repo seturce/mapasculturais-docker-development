@@ -98,6 +98,9 @@ COPY ./entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 RUN chmod +x /recreate-pending-pcache-cron.sh
 
+# Copy config app file
+COPY ./config.php /tmp/config.php
+
 ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["php-fpm"]

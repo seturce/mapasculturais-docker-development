@@ -106,35 +106,13 @@ return array_merge($config,
              'sessionTime' => 7200, // int , tempo da sessao do usuario em segundos
              'numberloginAttemp' => '5', // tentativas de login antes de bloquear o usuario por X minutos
              'timeBlockedloginAttemp' => '900', // tempo de bloqueio do usuario em segundos
-             'strategies' => [],
-        //     	'Facebook' => [
-        //        	    'app_id' => 'SUA_APP_ID',
-        //             'app_secret' => 'SUA_APP_SECRET',
-        //             'scope' => 'email'
-        //     	],
-        //         'LinkedIn' => [
-        //             'api_key' => 'SUA_API_KEY',
-        //             'secret_key' => 'SUA_SECRET_KEY',
-        //             'redirect_uri' => '/autenticacao/linkedin/oauth2callback',
-        //             'scope' => 'r_emailaddress'
-        //         ],
-        //         'Google' => [
-        //             'client_id' => 'SEU_CLIENT_ID',
-        //             'client_secret' => 'SEU_CLIENT_SECRET',
-        //             'redirect_uri' => '/autenticacao/google/oauth2callback',
-        //             'scope' => 'email'
-        //         ],
-        //        'Twitter' => [
-        //            'app_id' => 'SUA_APP_ID',
-        //            'app_secret' => 'SUA_APP_SECRET',
-        //        ],
-        
+             'strategies' => [],        
         ],
 
         'doctrine.database' => [
-            'dbname'    => 'mapasculturais',
-            'user'      => 'postgres',
-            'password'  => 'postgres',
+            'dbname'    => 'mapas',
+            'user'      => 'mapas',
+            'password'  => 'mapas',
             'host'      => 'mapas-postgresql',
             'port'      => '5432',
         ],
