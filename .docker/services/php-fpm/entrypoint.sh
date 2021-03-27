@@ -2,6 +2,9 @@
 set -e
 
 if [ ! -f /.deployed ]; then
+    # git ignore change file permisions
+    git config --global core.filemode false
+
     #deploy project, theme and plugins
     cd /var/www/html/mapasculturais
     git clone  https://github.com/secultce/mapasculturais.git .
