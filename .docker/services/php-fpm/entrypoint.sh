@@ -1,9 +1,7 @@
 #!/bin/bash
 set -e
 
-if [ ! -f /.deployed ]; then
-    # git ignore change file permisions
-    git config --global core.filemode false
+if [ ! -f /.deployed ]; thens
 
     #deploy project, theme and plugins
     cd /var/www/html/mapasculturais
