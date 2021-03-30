@@ -1,8 +1,7 @@
 #!/bin/bash
 set -e
 
-if [ ! -f /.deployed ]; thens
-
+if [ ! -f /.deployed ]; then
     #deploy project, theme and plugins
     cd /var/www/html/mapasculturais
     git clone  https://github.com/secultce/mapasculturais.git .
