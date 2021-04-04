@@ -1,0 +1,36 @@
+2021/04/04 15:23:13 [error] 7#7: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080"
+2021/04/04 15:23:54 [error] 7#7: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080"
+2021/04/04 15:23:56 [error] 7#7: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080"
+2021/04/04 15:26:46 [error] 7#7: *24 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/Utility/PersisterHelper.php): failed to open stream: Input/output error in /var/www/html/mapasculturais/src/protected/vendor/composer/ClassLoader.php on line 478
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/src/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\Repositories\Subsite->findOneBy() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:430
+PHP message: PHP   5. Doctrine\ORM\Persisters\Entity\BasicEntityPersister->load() /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php:211
+PHP message: PHP   6. Doctrine\ORM\Persisters\Entity\BasicEntityPersister->getSelectSQL() /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php:729
+PHP message: PHP   7. Doctrine\ORM\Persisters\Entity\BasicEntityPersister->getSelectColumnsSQL() /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php:1090
+PHP message: PHP   8. Doctrine\ORM\Persisters\Entity\BasicEntityPersister->getSelectColumnAssociationSQL() /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php:1221
+PHP message: PHP   9. spl_autoload_call() /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php:1339
+PHP message: PHP  10. Composer\Autoload\ClassLoader->loadClass() /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php:1339
+PHP message: PH
+2021/04/04 15:26:46 [error] 7#7: *24 FastCGI sent in stderr: "PHP message: PHP Warning:  include(): Failed opening '/var/www/html/mapasculturais/src/protected/vendor/composer/../doctrine/orm/lib/Doctrine/ORM/Utility/PersisterHelper.php' for inclusion (include_path='.:/usr/local/lib/php') in /var/www/html/mapasculturais/src/protected/vendor/composer/ClassLoader.php on line 478
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/html/mapasculturais/src/index.php:0
+PHP message: PHP   2. require_once() /var/www/html/mapasculturais/src/index.php:2
+PHP message: PHP   3. MapasCulturais\App->init() /var/www/html/mapasculturais/s" while reading upstream, client: 172.18.0.1, server: localhost, request: "GET /agentes/edita/25/ HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/agentes/edita/25/"
+2021/04/04 15:26:46 [error] 7#7: *24 FastCGI sent in stderr: "rc/protected/application/bootstrap.php:23
+PHP message: PHP   4. MapasCulturais\Repositories\Subsite->findOneBy() /var/www/html/mapasculturais/src/protected/application/lib/MapasCulturais/App.php:430
+PHP message: PHP   5. Doctrine\ORM\Persisters\Entity\BasicEntityPersister->load() /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php:211
+PHP message: PHP   6. Doctrine\ORM\Persisters\Entity\BasicEntityPersister->getSelectSQL() /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php:729
+PHP message: PHP   7. Doctrine\ORM\Persisters\Entity\BasicEntityPersister->getSelectColumnsSQL() /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php:1090
+PHP message: PHP   8. Doctrine\ORM\Persisters\Entity\BasicEntityPersister->getSelectColumnAssociationSQL() /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php:1221
+PHP message: PHP   9. spl_autoload_call() /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php:1339
+PHP message: PHP  10. Composer\Autoload\ClassLoader->loadClass() /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php:1339
+PHP message: PHP  11. Composer\Autoload\includeFile() /var/www/html/mapasculturais/src/protected/vendor/composer/ClassLoader.php:346" while reading upstream, client: 172.18.0.1, server: localhost, request: "GET /agentes/edita/25/ HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/agentes/edita/25/"
+2021/04/04 15:26:46 [error] 7#7: *24 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'Doctrine\ORM\Utility\PersisterHelper' not found in /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php:1339
+Stack trace:
+#0 /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php(1221): Doctrine\ORM\Persisters\Entity\BasicEntityPersister->getSelectColumnAssociationSQL('owner', Array, Object(Doctrine\ORM\Mapping\ClassMetadata))
+#1 /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php(1090): Doctrine\ORM\Persisters\Entity\BasicEntityPersister->getSelectColumnsSQL()
+#2 /var/www/html/mapasculturais/src/protected/vendor/doctrine/orm/lib/Doctrine/ORM/Persisters/Entity/BasicEntityPersister.php(729): Doctrine\ORM\Persisters\Entity\BasicEntityPersister->getSelectSQL(Array, NULL, NULL, 1, NULL, NULL)
+#3 /var/www/html/mapasculturais/src/protected/vendor/doctr" while reading upstream, client: 172.18.0.1, server: localhost, request: "GET /agentes/edita/25/ HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080", referrer: "http://localhost:8080/agentes/edita/25/"
